@@ -5,11 +5,11 @@ import neopixel
 class RainbowController:
     DOWN = 144
 
-    def __init__(self, num_lights):
+    def __init__(self, num_lights,color_on,color_off):
         # state of the lights
         self.num_lights = num_lights
-        self.color_on = (255,255,255)
-        self.color_off = (0,0,0)
+        self.color_on = color_on
+        self.color_off = color_off
         self.next_light = 0
         self.prev_light = 0
 
