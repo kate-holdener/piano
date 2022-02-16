@@ -22,6 +22,7 @@ class RainbowController:
 
 
     def process_event(self, event):
+        
         self.color_off = self.color_on
         if self.next_light % (self.num_lights * 2) == 0:
             self.next_light = 0
