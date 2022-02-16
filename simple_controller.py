@@ -21,6 +21,7 @@ class SimpleController:
         self.pixels.fill((0,0,0))
 
 
+    
     def process_event(self, event):
         message, deltatime = event
         state = message[0]
