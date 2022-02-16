@@ -1,7 +1,6 @@
 # libraries for controlling lights
-import board
-import neopixel
-
+#import board
+#import neopixel
 class SimpleController:
     DOWN = 144
 

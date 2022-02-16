@@ -1,7 +1,7 @@
 # libraries for controlling lights
-import board
-import neopixel
-
+#import board
+#import neopixel
+import lights_controller
 class RainbowController(SimpleController):
     DOWN = 144
 
