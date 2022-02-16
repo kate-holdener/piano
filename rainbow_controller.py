@@ -9,7 +9,7 @@ class RainbowController(SimpleController):
         super().__init__(self, num_lights, (255,255,255), (0,0,0))
         # state of the lights
         # self.num_lights = num_lights
-        #  self.color_on = (255,255,255)
+        #  self.color_o n = (255,255,255)
         #  self.color_off = (0,0,0)
         # self.next_light = 0
         # self.prev_light = 0
