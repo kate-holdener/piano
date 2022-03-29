@@ -7,8 +7,11 @@ class EventQueueRunner:
     def run(self):
         self.terminate = False
         while not self.terminate:
-            event = self.event_queue.get()
-            self.controller.process_event(event)
+            self.process()
 
+    def process(self):
+        event = self.event_queue.get()
+        self.controller.process_event(event)
+       
     def stop(self):
         self.terminate = True
