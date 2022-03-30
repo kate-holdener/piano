@@ -7,11 +7,12 @@ class EventQueueRunner:
     def run(self):
         self.terminate = False
         while not self.terminate:
-            self.process()
+            self.drain_queue()
 
-    def process(self):
-        event = self.event_queue.get()
-        self.controller.process_event(event)
+    def drain_queue(self):
+        while not self.event_queue.empty():
+           event = self.event_queue.get()
+           self.controller.process_event(event)
        
     def stop(self):
         self.terminate = True
