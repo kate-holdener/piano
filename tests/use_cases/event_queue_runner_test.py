@@ -4,7 +4,9 @@ from use_cases.event_queue_runner import EventQueueRunner
 class Controller:
     def __init__(self):
         self.event_count = 0
-    def process_event(self, event):  # pylint: disable-unused-argument
+
+    # pylint: disable=unused-argument
+    def process_event(self, event):
         self.event_count+=1
 
 def test_one_event():

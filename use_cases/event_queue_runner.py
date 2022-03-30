@@ -11,8 +11,8 @@ class EventQueueRunner:
 
     def drain_queue(self):
         while not self.event_queue.empty():
-           event = self.event_queue.get()
-           self.controller.process_event(event)
-       
+            event = self.event_queue.get()
+            self.controller.process_event(event)
+
     def stop(self):
         self.terminate = True
