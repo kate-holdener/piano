@@ -1,7 +1,12 @@
 # libraries for controlling lights
 
 class LightController:
-
+    """
+    Controls the lights via a given api. The api must
+    have the following functions:
+    - get_num_lights()
+    - set_light(index, color)
+    """
     def __init__(self, api, color_on, color_off):
         self.api = api
         self.num_lights = api.get_num_lights()

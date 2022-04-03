@@ -19,3 +19,12 @@ def test_first_key_down():
     assert api.lights[0] == (5,5,5)
     for color in api.lights[1:]:
         assert color == (-1,-1,-1)
+
+def test_full_strand():
+    api = Api(2)
+    down_event = Event(144, 45, 20, 1)
+    simple_controller = SimpleController(api, (5,5,5), (1,1,1))
+    simple_controller.process_event(down_event)
+    simple_controller.process_event(down_event)
+    assert api.lights[1] == (5,5,5)
+    assert api.lights[0] == (1,1,1)
