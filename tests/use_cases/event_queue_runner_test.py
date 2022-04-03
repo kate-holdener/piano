@@ -17,7 +17,7 @@ def init_components(queue_size):
 
 def test_one_event():
     # assemble the test components
-    (event_queue, test_controller, event_queue_runner) = init(1)
+    (event_queue, test_controller, event_queue_runner) = init_components(1)
 
     # act on the test components
     event_queue.put('hi')
@@ -29,7 +29,7 @@ def test_one_event():
 
 def test_run_thread():
     # assemble the test components
-    (event_queue, test_controller, event_queue_runner) = init(1)
+    (event_queue, test_controller, event_queue_runner) = init_components(1)
 
     # act on the test components
     event_queue.put('hi')
@@ -42,7 +42,7 @@ def test_run_thread():
 
 def test_thread_multi_event():
     # assemble the test components
-    (event_queue, test_controller, event_queue_runner) = init(1)
+    (event_queue, test_controller, event_queue_runner) = init_components(1)
 
     # act on the test components
     event_queue.put('hi')

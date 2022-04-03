@@ -1,7 +1,7 @@
 import threading
 class EventQueueRunner:
     """
-    This class reads events from a queue and passes them to 
+    This class reads events from a queue and passes them t0
     controller.process_event(event) function in a dedicated
     thread. To start processing, use run() function. To stop
     processing use stop() function. All events that were in the
