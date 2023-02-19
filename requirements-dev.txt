@@ -1,0 +1,3 @@
+graphics.py
+pyqt5
+python-rtmidi
